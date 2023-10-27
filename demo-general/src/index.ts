@@ -21,6 +21,7 @@ import LogoSamplePlugin from './plugins/plugin-logo-sample';
 import SimulatorLocalePlugin from './plugins/plugin-simulator-locale';
 import lowcodePlugin from './plugins/plugin-lowcode-component';
 import appHelper from './appHelper';
+import DemoPlugin from './plugins/plugin-demo'
 import './global.scss';
 
 async function registerPlugins() {
@@ -49,6 +50,8 @@ async function registerPlugins() {
 
   // 设置内置 setter 和事件绑定、插件绑定面板
   await plugins.register(DefaultSettersRegistryPlugin);
+
+  await plugins.register(DemoPlugin);
 
   await plugins.register(LogoSamplePlugin);
 
